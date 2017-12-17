@@ -1,1 +1,2 @@
-export const TEST_API = 'TEST_API';
+export const TEST_GET = 'TEST_GET';
+export const TEST_POST = 'TEST_POST';

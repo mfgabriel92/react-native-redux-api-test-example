@@ -1,17 +1,21 @@
 import Login from '../../components/Auth/Login'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { testApi } from '../../actions/api'
+import { testGET, testPOST } from '../../actions/api'
 
 function mapStateToProps(state) {
   return {
-    api: state.testApi.data
+    api: {
+      get: state.testGET.data,
+      post: state.testPOST
+    }
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    testApi
+    testGET,
+    testPOST
   }, dispatch)
 }
 
